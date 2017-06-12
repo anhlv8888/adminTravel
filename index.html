@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>BookTravel | Dashboard</title>
+  <link rel="stylesheet" href=" admin-assets/css/custom-admin.css ">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -24,9 +25,10 @@
   <!-- jvectormap -->
   <link rel="stylesheet" href=" plugins/jvectormap/jquery-jvectormap-1.2.2.css ">
   <!-- Date Picker -->
-  <link rel="stylesheet" href=" plugins/datepicker/datepicker3.css')}}">
+   <link rel="stylesheet" href=" plugins/datepicker/datepicker3.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href=" plugins/daterangepicker/daterangepicker.css">
+  
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href=" plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css ">
 
@@ -329,7 +331,7 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="{{route('dashboard')}}">
+          <a href="index.html">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -354,19 +356,37 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-file-word-o"></i> <span>Bài viết</span>
+            <i class="fa fa-globe"></i> <span>Tour</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li class="active">
-              <a href="indexPost.html"><i class="fa fa-circle-o"></i> Danh sách bài viết</a>
+              <a href="indexTour.html"><i class="fa fa-circle-o"></i> Danh sách Tour</a>
             </li>
             <li>
-              <a href="createPost.html"><i class="fa fa-circle-o"></i> Thêm mới bài viết</a>
+              <a href="createTour.html"><i class="fa fa-circle-o"></i> Thêm mới Tour</a>
             </li>
           </ul>
+
+        </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-globe"></i> <span>TourDetail</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active">
+              <a href="indexTourDetail.html"><i class="fa fa-circle-o"></i> Danh sách TourDetail</a>
+            </li>
+            <li>
+              <a href="createTourDetail.html"><i class="fa fa-circle-o"></i> Thêm mới TourDetail</a>
+            </li>
+          </ul>
+          
         </li>
         
       </ul>
@@ -1099,7 +1119,7 @@
 </script>
 <!-- Bootstrap 3.3.6 -->
 <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/jQuery/jquery-3.2.1.min.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="plugins/morris/morris.min.js"></script>

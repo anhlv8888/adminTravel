@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BookTravel | Category</title>
+  <title>BookTravel | Dashboard</title>
   <link rel="stylesheet" href=" admin-assets/css/custom-admin.css ">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -25,9 +25,10 @@
   <!-- jvectormap -->
   <link rel="stylesheet" href=" plugins/jvectormap/jquery-jvectormap-1.2.2.css ">
   <!-- Date Picker -->
-  <link rel="stylesheet" href=" plugins/datepicker/datepicker3.css">
+   <link rel="stylesheet" href=" plugins/datepicker/datepicker3.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href=" plugins/daterangepicker/daterangepicker.css">
+  
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href=" plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css ">
 
@@ -327,7 +328,7 @@
       </form>
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-     <ul class="sidebar-menu">
+      <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="index.html">
@@ -398,8 +399,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+        Tour
+        <small>table</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -408,31 +409,72 @@
     </section>
 
     <!-- Main content -->
-   	<section class="content">
-      <div hidden class="alert alert-danger alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                check loi nha
-      </div>
-      <form action="" method="post" id="form-category" class="col-sm-6 col-sm-offset-3 form" novalidate>
-        <div class="form-group">
-          <label for="name">Ten Danh Muc</label>
-          <input type="text" class="form-control" value="" id="name" name="name" placeholder="Nhập tên danh mục">
-        </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-           <textarea id="description" class="form-control" name="description" ></textarea>
-      </div>
-      <div class="form-group text-center">
-        <button type="submit" class="btn btn-xs btn-success">
-          <i class="fa fa-save"></i> Save
-        </button>
-        <a href="#" class="btn btn-xs btn-danger">
-          <i class="fa fa-remove"></i> Cancel
-        </a>
+    <section class="content">
+     <div class="box-body table-responsive no-padding">
+          <div class="row">
+           <form action="#" method="get" >
+            <div  hidden="" class="col-md-3 form-group">
+              <select class="form-control" name="cate">
+                <option value="">Select All post </option>
+                <option   value="1">du lịch</option>
+                <option   value="2">thám hiểm</option>
+              </select>
+            </div> 
+            <div class="col-md-5 form-group">
+              <div class="col-md-10 relative">
+                <input type="text" name="keyword" class="form-control" placeholder="Finding here...." value="">
+                <button type="submit" class="add-on-input btn btn-sm btn-success">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>  
+
+            </form>
+          </div>
+
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <th>ID TourDetail</th>
+              <th>Tiêu đề Tour</th>
+              <th>Thời gian BĐ</th>
+              <th>Thời gian KT</th>
+              <th>Số chỗ</th>
+              <th>Giá ảo</th>
+              <th>Giá thật</th>
+              <th>Trạng thái</th>
+              <th>
+                <a href="#" class="btn btn-success btn-xs">
+                  <i class="fa fa-plus"></i> Add new
+                </a>
+              </th>
+            </tr>
+             
+
+            <tr>
+              <td>1</td>
+              <td>
+                <p>đà nẵng- hội an</p>
+                <img width="100px" src="admin-assets/img/user4-128x128.jpg" alt="">
+              </td>
+              <td>20/06/2016</td>
+              <td>25/06/2016</td>
+              <td>5</td>
+              <td>1,000,000đ</td>
+              <td>800,000đ</td>
+              <td>Chưa đi</td>
+              <td>
+                <a href="updateCategory.html" class="btn btn-info btn-xs">
+                  <i class="fa fa-pencil"></i> Update
+                </a> 
+              </td>
+            </tr>
+            
+             
+          </tbody>
+        </table>
       </div>
 
-
-    </form>
     </section>
     <!-- /.content -->
   </div>
@@ -650,8 +692,7 @@
 </script>
 <!-- Bootstrap 3.3.6 -->
 <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/jQuery/jquery-3.2.1.min.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="plugins/morris/morris.min.js"></script>
@@ -679,23 +720,5 @@
 <script src="admin-assets/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="admin-assets/js/demo.js"></script>
-<script type="text/javascript">
-   $( document ).ready(function() {
-      $('#form-category').submit(function(){
-        var name    = $.trim($('#name').val());
-        var flag = true;
-          // Username
-         if (name.length <= 0){
-             $('#name').attr("placeholder", "Bạn Chưa nhập tên danh mục");
-                flag = false;
-                   // debugger;
-                   }
-              else{
-                $('#name').attr("placeholder", "");
-              }
-          return flag;
-        });
-  });
-</script>
 </body>
 </html>
