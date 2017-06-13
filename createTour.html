@@ -458,7 +458,7 @@
         <div class="form-group col-md-11 col-sm-offset-1">
           <label for="content">Lịch Trình</label>
           <!-- <div class="col-md-12"> -->
-           <textarea id="content" class="form-control" name="content" rows="10"></textarea>
+           <textarea id="content" class="form-control content" name="content" rows="10"></textarea>
            <span class="text-danger" id="contentError"></span>
          <!-- </div> -->
       </div>
@@ -727,13 +727,13 @@
       $('#form-category').submit(function(){
         var title    = $.trim($('#title').val());
         var placePickup    = $.trim($('#placePickup').val());
-        var placeDrop    = $.trim($('#placeDropup').val());
+        var placeDrop    = $.trim($('#placeDrop').val());
         var imageTitle    = $.trim($('#imageTitle').val());
-        var content    = $.trim($('#content').val());
+        var content    = $.trim($('.content').val());
         var category    = $.trim($('#category').val());
         var flag = true;
           // title
-          if (name.length <= 0){
+          if (title.length <= 0){
            $('#title').attr("placeholder", "Bạn chưa nhập tên Tour");
            flag = false;
                    // debugger;
@@ -749,45 +749,45 @@
                  }
                  else{
                   $('#placePickup').attr("placeholder", "");
-              }
+                }
               //
-               if (placeDrop.length <= 0){
+              if (placeDrop.length <= 0){
                $('#placeDrop').attr("placeholder", "Bạn chưa nhập điểm tới");
                flag = false;
                    // debugger;
                  }
                  else{
                   $('#placeDrop').attr("placeholder", "");
-              }
+                }
               //
-                if (category.length <= 0){
+              if (category.length <= 0){
                $('#categoryError').text( "Bạn chưa chọn thể loại ");
                flag = false;
                    // debugger;
                  }
                  else{
                   $('#categoryError').text("");
-              }
+                }
               //
-               if (imageTitle.length <= 0){
+              if (imageTitle.length <= 0){
                $('#imageError').text( "Bạn chưa có ảnh ");
                flag = false;
                    // debugger;
                  }
                  else{
                   $('#imageError').text("");
-              }
+                }
               //
-               if (content.length <= 0){
-               $('#contentError').text( "Bạn chưa nhập lịch trình Tour");
-               flag = false;
-                   // debugger;
-                 }
-                 else{
-                  $('#contentError').text(" ");
-              }
+            //   if (content == ""){
+            //    $('#contentError').text( "Bạn chưa nhập lịch trình Tour");
+            //    flag = false;
 
-          return flag;
+            //  }
+            //  else{
+            //   $('#contentError').text(" ");
+            // }
+               debugger;
+            return flag;
         });
   });
 </script>
