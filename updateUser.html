@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -420,101 +420,42 @@
     </section>
 
     <!-- Main content -->
-   	<section class="content">
+    <section class="content">
       <div hidden="" class="alert alert-danger alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 check loi nha
       </div>
-      <form action="" method="post" id="form-tourDetail" class=" form" >
-      	<div class="col-sm-6">
-      		<div class="form-group col-sm-8 col-sm-offset-2">
-      		<label class="idTour">Tên Tour
-      			</label>
-      			<select class="form-control" name="idTour" id="idTour" required>
-      				<option value="">Chọn Tên Tour</option>
-      				<option value="1">Đà Nẵng - Hội An</option>  
-      			</select>
-      			<span class="text-danger" id="TourError"></span>
-      		</div>
+      <form action="" method="post" id="form-user" class=" form" >
+        <div class="col-sm-6">
           <div class="form-group col-sm-8 col-sm-offset-2">
-            <label for="seat">Chỗ Ngồi</label>
-            <input type="number" class="form-control"  name="seat" id="seat"  placeholder="Nhập số chỗ ngồi của Tour"  required>
+            <label for="fullName">Họ và Tên</label>
+            <input type="text" class="form-control"  name="fullName" id="fullName"  placeholder="Nhập Họ và Tên"  required>
           </div>
           <div class="form-group col-sm-8 col-sm-offset-2">
-          	<label for="timeBegin">Thời gian bắt đầu:</label>
-
-          	<div class="input-group date">
-          		<div class="input-group-addon">
-          			<i class="fa fa-calendar"></i>
-          		</div>
-          		<input type="text" class="form-control pull-right" name="timeBegin" id="timeBegin" required>
-          	</div>
-          	 
+            <label for="email">Email</label>
+            <input type="email" class="form-control" readonly  name="email" id="email"  placeholder="Nhập Email của bạn"  required>
           </div>
           <div class="form-group col-sm-8 col-sm-offset-2">
-          	<label for="timeEnd">Thời gian kết thúc:</label>
-
-          	<div class="input-group date">
-          		<div class="input-group-addon">
-          			<i class="fa fa-calendar"></i>
-          		</div>
-          		<input type="text" class="form-control pull-right" name="timeEnd" id="timeEnd" required>
-          	</div>
-          	 
-          </div>
-           <div class="form-group col-sm-8 col-sm-offset-2">
-            <label for="important">Tour Hot</label>
-            <div class="radio-list " >
-            	<label class="radio-inline">
-            		<input type="radio" name="important" id="optionsRadios4" value="0" checked="">
-            		Có 
-            	</label>
-            	<label class="radio-inline">
-            		<input type="radio" name="important" id="optionsRadios5" value="1">
-            		Không
-            	</label>
-            </div>
+            <label for="phone">Phone</label>
+            <input type="number" class="form-control"  name="phone" id="phone"  placeholder="Nhập Số Điện Thoại"  required>
           </div>
         </div>
            
         <div class="col-sm-6">
-           
-          	<div class="form-group col-sm-8 col-sm-offset-1">
-          		<label for="realPrice">Giá đã sale</label>
-          		<input type="number" class="form-control" name="realPrice" id="realPrice" placeholder="Nhâp giá bán thật" required>
-          	</div>
-          	<div class="form-group col-sm-8 col-sm-offset-1">
-          		<label for="virtualPrice">Giá Hiển Thị</label>
-          		<input type="number" class="form-control" name="virtualPrice" id="virtualPrice" placeholder="Nhập giá hiển thị " required>
-          	</div>
-          	<div class="form-group col-sm-8 col-sm-offset-1">
-          		<label for="sale1">Giảm giá từ 6 -> 14 người </label>
-          		<input type="number" class="form-control" name="sale1" id="sale1"  placeholder="Nhập giảm bao % "  required>
-          	</div>
-          	<div class="form-group col-sm-8 col-sm-offset-1">
-          		<label for="sale2">Giảm giá từ 15 người trở lên </label>
-          		<input type="number" class="form-control" name="sale2" id="sale2"  placeholder="Nhập giảm bao %"  required>
-          	</div>
-            <!-- status -->
-           <div class="form-group col-sm-8 col-sm-offset-2">
-            <label for="stateTour">Trạng Thái</label>
-            <div class="radio-list " >
-              <label class="radio-inline">
-                <input type="radio" name="stateTour" id="optionsRadios4" value="0" checked="">
-                Chưa đi 
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="stateTour" id="optionsRadios5" value="1">
-                Đang đi
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="stateTour" id="optionsRadios5" value="2">
-                kết Thúc
-              </label>
-              <!-- end status -->
-            </div>
-          </div>
-          
+        	<div class="form-group col-sm-8 col-sm-offset-2">
+        		<label for="address">Address</label>
+        		<input type="text" class="form-control"  name="address" id="address"  placeholder="Nhập số nhà,đường phường,quận"  required>
+        	</div>
+        	<div class="form-group col-sm-8 col-sm-offset-2">
+        		<label for="password">Thay Đổi Mật Khẩu
+						 <input type="checkbox" id="ChangePassword" name="changePassword">
+        		</label>
+        		<input type="password" class="form-control password" style="display: none;"   name="password" id="password"  placeholder="Nhập mật khẩu"  required>
+        	</div>
+        	<div class="form-group col-sm-8 col-sm-offset-2 password" style="display: none;">
+        		<label for="cfpassword">Nhập Lại Mật Khẩu</label>
+        		<input type="password" class="form-control "    name="cfpassword" id="cfpassword" placeholder="Nhập lại mật khẩu" required>
+        	</div>
         </div>
       
 
@@ -779,39 +720,32 @@
 <script type="text/javascript">
   // ckeditor("content");
    $( document ).ready(function() {
-   	 	 $( "#timeBegin" ).datepicker();
-   	 	  $( "#timeEnd" ).datepicker();   
-  	});
-   function checkdate(){
-   	 // alert (342);
-	   	var timeBegin = document.getElementById("timeBegin").value;
-	   	var timeEnd = document.getElementById("timeEnd").value;
-	   	// debugger;
-	   	var check = true;
-	   	if (Date.parse(timeBegin) > Date.parse(timeEnd)) {
-	   		// debugger;
-	   		alert("Xin xác nhận lại thời gian ,thời gian bắt đầu phải nhỏ hơn thời gian kết thúc");
-	   		check = false;
-	   	}
-	   	return check;
-   }	
-</script>
-<script type="text/javascript"> 
-	// $("#form-tourDetail").validate();
-  function readURL(input) {
-    var url = input.value;
-    var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-    if (input.files && input.files[0]&& (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#target-avatar').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }else{
-         $('#target-avatar').attr('src', '');
-    }
-  }
+       $( "#timeBegin" ).datepicker();
+        $( "#timeEnd" ).datepicker();  
+         $("#form-user").submit(function(){
+         	 var password    = $.trim($('#password').val());
+         	 var cfpassword    = $.trim($('#cfpassword').val());
+         	 var flag = true;
+         	 if (password != cfpassword) {
+         	 	alert ("PassWord không trùng nhau ,Nhập lại");
+         	 	flag = false;
+         	 }
+         	 return flag;
 
+         });
+
+         $("#ChangePassword").change(function () {
+                if($(this).is(":checked"))
+                {
+                     
+                    $(".password").slideDown();
+                }else {
+                    $(".password").slideUp();
+                }
+           });
+    }); 
+   // $("#form-user").validate();
 </script>
+ 
 </body>
 </html>
