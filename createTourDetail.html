@@ -428,12 +428,9 @@
       <form action="" method="post" id="form-tourDetail" class=" form" >
         <div class="col-sm-6">
           <div class="form-group col-sm-8 col-sm-offset-2">
-          <label class="idTour">Tên Tour
+          <label class="name">Tên Tour
             </label>
-            <select class="form-control" name="idTour" id="idTour" required>
-              <option value="">Chọn Tên Tour</option>
-              <option value="1">Đà Nẵng - Hội An</option>  
-            </select>
+               <input type="text" class="form-control" readonly="" name="name" id="name"  >
             <span class="text-danger" id="TourError"></span>
           </div>
           <div class="form-group col-sm-8 col-sm-offset-2">
@@ -463,14 +460,14 @@
              
           </div>
            <div class="form-group col-sm-8 col-sm-offset-2">
-            <label for="title">Tour Hot</label>
+            <label for="title">Tour Giá Sốc</label>
             <div class="radio-list " >
               <label class="radio-inline">
-                <input type="radio" name="important" id="optionsRadios4" value="0" checked="">
+                <input type="radio" name="important" id="optionsRadios4" value="1" >
                 Có 
               </label>
               <label class="radio-inline">
-                <input type="radio" name="important" id="optionsRadios5" value="1">
+                <input type="radio" name="important" id="optionsRadios5" checked="" value="0">
                 Không
               </label>
             </div>
