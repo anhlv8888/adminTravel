@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BookTravel | Dashboard</title>
+  <title>BookTravel | Category</title>
   <link rel="stylesheet" href=" admin-assets/css/custom-admin.css ">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -25,10 +25,9 @@
   <!-- jvectormap -->
   <link rel="stylesheet" href=" plugins/jvectormap/jquery-jvectormap-1.2.2.css ">
   <!-- Date Picker -->
-   <link rel="stylesheet" href=" plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href=" plugins/datepicker/datepicker3.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href=" plugins/daterangepicker/daterangepicker.css">
-  
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href=" plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css ">
 
@@ -382,102 +381,13 @@
             <li class="active">
               <a href="indexTourDetail.html"><i class="fa fa-circle-o"></i> Danh sách TourDetail</a>
             </li>
-          </ul>
-          
-        </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i> <span>OrderTour</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="indexOrderTour.html"><i class="fa fa-circle-o"></i> Danh sách OrderTour</a>
-            </li>
-          </ul>
-          
-        </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-user-circle-o"></i> <span>User</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="indexUser.html"><i class="fa fa-circle-o"></i> Danh sách User</a>
-            </li>
             <li>
-              <a href="createUser.html"><i class="fa fa-circle-o"></i> Thêm mới User</a>
+              <a href="createTourDetail.html"><i class="fa fa-circle-o"></i> Thêm mới TourDetail</a>
             </li>
           </ul>
           
         </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-car"></i> <span>Car</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="indexCar.html"><i class="fa fa-circle-o"></i> Danh sách Car</a>
-            </li>
-            <li>
-              <a href="createCar.html"><i class="fa fa-circle-o"></i> Thêm mới Car</a>
-            </li>
-          </ul>
-          
-        </li>
-         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i> <span>OrderCar</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="indexOrderCar.html"><i class="fa fa-circle-o"></i> Danh sách OrderCar</a>
-            </li>
-          </ul>
-          
-        </li>
-          <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pencil"></i> <span>Blog</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="indexBlog.html"><i class="fa fa-circle-o"></i> Danh sách Blog</a>
-            </li>
-            <li>
-              <a href="createBlog.html"><i class="fa fa-circle-o"></i> Thêm mới Blog</a>
-            </li>
-          </ul>
-          
-        </li>
-          <li class="treeview">
-          <a href="#">
-            <i class="fa fa-phone"></i> <span>Contact</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <a href="indexContact.html"><i class="fa fa-circle-o"></i> Danh sách Contact</a>
-            </li>
-          </ul>
-          
-        </li>
+        
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -488,8 +398,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+        Category
+        <small>Table</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -498,370 +408,42 @@
     </section>
 
     <!-- Main content -->
-           <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>100</h3>
+   	<section class="content">
+   		<div class="box-body table-responsive no-padding">
+   			<table class="table table-hover">
+   				<tbody>
+   					<tr>
+   						<th>ID Blog</th>
+   						<th>Tên Blog</th>
+   						<th>Ảnh đại diện</th>
+   						<th>Người Viết</th>
+   						<th>Thời gian tạo</th>
+   						<th>
+   							<a href="#" class="btn btn-success btn-xs">
+   								<i class="fa fa-plus"></i> Add new
+   							</a>
+   						</th>
+   					</tr>
+   					 
 
-              <p>Tour Du Lịch</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-globe"></i>
-            </div>
-            <a href="indexTourDetail.html" class="small-box-footer">Xem Thêm <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>50</h3>
-
-              <p>Ô tô</p>
-            </div>
-            <div class="icon">
-              <i class="fa  fa-car"></i>
-            </div>
-            <a href="indexCar" class="small-box-footer">Xem Thêm <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>100</h3>
-
-              <p>Đặt Tour</p>
-            </div>
-            <div class="icon">
-              <i class=" fa fa-shopping-cart"></i>
-            </div>
-            <a href="indexOrderTour.html" class="small-box-footer">Xem Thêm <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3>90</h3>
-
-              <p>Đặt Xe</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-shopping-cart"></i>
-            </div>
-            <a href="indexOrderCar.html" class="small-box-footer">Xem Thêm <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-         <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-primary">
-            <div class="inner">
-              <h3>90</h3>
-
-              <p>User</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-user"></i>
-            </div>
-            <a href="indexOrderCar.html" class="small-box-footer">Xem Thêm <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-gray">
-            <div class="inner">
-              <h3>20</h3>
-
-              <p>Blog</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-pencil"></i>
-            </div>
-            <a href="indexOrderCar.html" class="small-box-footer">Xem Thêm <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-
-      </div>
-      <!-- /.row -->
-      <!-- Main row -->
-      <div class="row">
-        <!-- Left col -->
-        <section class="col-lg-6 connectedSortable">
-          <!-- table OrderTour -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Latest OrderTour</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="table-responsive">
-                <table class="table no-margin">
-                  <thead>
-                    <tr>
-
-                      <th>ID OrderTOur</th>
-                      <th>Tên Tour</th>
-                      <th>Tổng Giá</th>
-                      <th>Loại Giao Dịch</th>
-                      <th>Thanh Toán</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                   <!-- lấy 7 Order Car mới nhất -->
-                    <tr>
-                      <td><a href="">OR9842</a></td>
-                      <td>Hà Nội -Đà Nẵng</td>
-                      <td>2,000,000đ</td>
-                      <td>Online</td>
-                      <td><span class="label label-success">Đã Chuyển</span></td> 
-                    </tr>
-                    <tr>
-                      <td><a href="">OR9843</a></td>
-                      <td>Hà Nội -Đà Nẵng- Hội An</td>
-                      <td>4,000,000đ</td>
-                      <td>Chuyển Khoản</td>
-                      <td><span class="label label-warning">Chưa Chuyển</span></td> 
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.table-responsive -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <a href="indexOrderTour.html" class="btn btn-sm btn-default btn-flat pull-right">Xem Tất Cả Order</a>
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- End Table Tour -->
-          
-         
-        </section>
-        <!-- /.Left col -->
-        <!-- right col (We are only adding the ID to make the widgets sortable)-->
-        <section class="col-lg-6 connectedSortable">
-           <!-- table OrderCar -->
-           <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Latest OrderCar</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="table-responsive">
-                <table class="table no-margin">
-                  <thead>
-                    <tr>
-                      <th>ID OrderCar</th>
-                      <th>Tên Xe</th>
-                      <th>Tổng Giá</th>
-                      <th>Loại Giao Dịch</th>
-                      <th>Thanh Toán</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- lấy 7 Order Car mới nhất -->
-                    <tr>
-                      <td><a href="">OR9842</a></td>
-                      <td>Toyouta camry</td>
-                      <td>2,000,000đ</td>
-                      <td>Online</td>
-                      <td><span class="label label-success">Đã Chuyển</span></td> 
-                    </tr>
-                    <tr>
-                      <td><a href="">OR9843</a></td>
-                      <td>Honda Civic</td>
-                      <td>4,000,000đ</td>
-                      <td>Chuyển Khoản</td>
-                      <td><span class="label label-warning">Chưa Chuyển</span></td> 
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.table-responsive -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <a href="indexOrderTour.html" class="btn btn-sm btn-default btn-flat pull-right">Xem Tất Cả Order</a>
-            </div>
-            <!-- /.box-footer -->
-          </div>
-
-          <!-- End OrderCar -->
-
-        </section>
-        <!-- right col -->
-        <section class="col-lg-6 connectedSortable">
-              <h3 class=" box-title  text-center">Bảng Doanh Thu Tour</h3>
-
-             <div class="box box-primary">
-            <div class="box-header with-border">
-              
-                  
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-              <div class="row">
-                <form action="#" method="get" >
-                  <div class="col-md-4 form-group">
-                      <input type="text"  placeholder="From" class="form-control" id="dateFormTour" name="dateForm">
-                  </div>
-                  <div class="col-md-4 form-group">
-                      <input type="text"  placeholder="To" class="form-control" id="dateToTour" name="dateTo">
-                  </div> 
-
-                  <div class="col-md-2 form-group">
-                    <button type="submit" onclick=" return checkdate()"x class=" btn btn-sm btn-success">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                  </div>  
-                </form>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="table-responsive">
-                <table class="table no-margin">
-                  <thead>
-                    <tr>
-                      <th>ID OrderTour</th>
-                      <th>Tên Tour</th>
-                      <th>Người đặt</th>
-                      <th>Số lượng người</th>
-                      <th>Tổng Tiền</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- lấy 7 Order Car mới nhất -->
-                    <tr>
-                      <td><a href="">OR9842</a></td>
-                      <td>Đà nẵng</td>
-                      <td>Lê việt anh</td>
-                      <td>2</td>
-                      <td>3,000,000đ</td> 
-                    </tr>
-                     <tr>
-                      <td><a href="">OR9842</a></td>
-                      <td>Hội an</td>
-                      <td>Lê việt em</td>
-                      <td>2</td>
-                      <td>3,000,000đ</td> 
-                    </tr>
-                    <tr>
-                      <td>Tổng Order</td>
-                      <td>13</td>
-                      <td colspan="2" class="text-center"> Tổng Tiền</td>
-                      <td>6,000,000đ</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.table-responsive -->
-            </div>
-            
-          </div>
-        </section>
-        <section class="col-lg-6 connectedSortable">
-          <h3 class=" box-title  text-center">Bảng Doanh Thu Car</h3>
-
-          <div class="box box-primary">
-            <div class="box-header with-border"> 
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-              <div class="row">
-                <form action="#" method="get" >
-                  <div class="col-md-4 form-group">
-                    <input type="text"  placeholder="From" class="form-control" id="dateFormCar" name="dateForm">
-                  </div>
-                  <div class="col-md-4 form-group">
-                    <input type="text"  placeholder="To" class="form-control" id="dateToCar" name="dateTo">
-                  </div> 
-
-                  <div class="col-md-2 form-group">
-                    <button type="submit" onclick=" return checkdate1()" class=" btn btn-sm btn-success">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                  </div>  
-                </form>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="table-responsive">
-                <table class="table no-margin">
-                  <thead>
-                    <tr>
-                      <th>ID OrderCar</th>
-                      <th>Tên Xe</th>
-                      <th>Người Đặt</th>
-                      <th>Số Xe</th>
-                      <th>Tổng Tiền</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- lấy 7 Order Car mới nhất -->
-                    <tr>
-                      <td><a href="">OR9842</a></td>
-                      <td>Camry</td>
-                      <td>Lê việt anh</td>
-                      <td>2</td>
-                      <td>3,000,000đ</td> 
-                    </tr>
-                    <tr>
-                      <td><a href="">OR9842</a></td>
-                      <td>CRV-HonDa</td>
-                      <td>Lê việt em</td>
-                      <td>2</td>
-                      <td>3,000,000đ</td> 
-                    </tr>
-                    <tr>
-                      <td>Tổng Order</td>
-                      <td>13</td>
-                      <td colspan="2" class="text-center"> Tổng Tiền</td>
-                      <td>6,000,000đ</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.table-responsive -->
-            </div>
-            
-          </div>
-
-
-        </section>
-      </div>
-      <!-- /.row (main row) -->
-
+   					<tr>
+   						<td>1</td>
+   						<td>làm sao để đi chơi an toàn</td>
+   						<td><img width="100px" src="admin-assets/img/user4-128x128.jpg" alt=""></td>
+   						<td>Lee Anh</td>
+   						<td>20/06/2017</td>
+   						<td>
+   							<a href="updateBlog.html" class="btn btn-info btn-xs">
+   								<i class="fa fa-pencil"></i> Update
+   							</a> 
+   						</td>
+   					</tr>
+   					 
+   					 
+   				</tbody>
+   			</table>
+   		</div>
     </section>
-
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -1078,7 +660,7 @@
 </script>
 <!-- Bootstrap 3.3.6 -->
 <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="plugins/jQuery/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="plugins/morris/morris.min.js"></script>
@@ -1106,40 +688,5 @@
 <script src="admin-assets/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="admin-assets/js/demo.js"></script>
-<!-- ChartJS 1.0.1 -->
-<script src="plugins/chartjs/Chart.min.js"></script>
-<script type="text/javascript"> 
-        $(document).ready(function(){
-            $("#dateFormTour").datepicker();
-            $("#dateToTour").datepicker();
-            $("#dateFormCar").datepicker();
-            $("#dateToCar").datepicker();
-
-        });
-        function checkdate(){
-            var dateFormTour = document.getElementById("dateFormTour").value;
-            var dateToTour = document.getElementById("dateToTour").value;
-             var dateFormCar = document.getElementById("dateFormCar").value;
-            var dateToCar = document.getElementById("dateToCar").value;
-            var check = true;
-            if (Date.parse(dateFormTour) > Date.parse(dateToTour)) {
-              alert("Xin xác nhận lại thời gian doanh thu Tour ");
-              check = false;
-            }
-           
-            return check;
-          }
-          function checkdate1() {
-            var dateFormCar = document.getElementById("dateFormCar").value;
-            var dateToCar = document.getElementById("dateToCar").value;
-            var check = true;
-              if (Date.parse(dateFormCar) > Date.parse(dateToCar)) {
-              alert("Xin xác nhận lại thời gian doanh thu Car");
-              check = false;
-              }
-              return check;
-          }
-
-</script>
 </body>
 </html>
