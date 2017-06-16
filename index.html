@@ -726,7 +726,7 @@
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
               <div class="row">
-                <form action="#" method="get" >
+                <form action="#" id="formTour" method="get" >
                   <div class="col-md-4 form-group">
                       <input type="text"  placeholder="From" class="form-control" id="dateFormTour" name="dateForm">
                   </div>
@@ -796,7 +796,7 @@
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
               <div class="row">
-                <form action="#" method="get" >
+                <form action="#" id="formCar" method="get" >
                   <div class="col-md-4 form-group">
                     <input type="text"  placeholder="From" class="form-control" id="dateFormCar" name="dateForm">
                   </div>
@@ -1114,6 +1114,27 @@
             $("#dateToTour").datepicker();
             $("#dateFormCar").datepicker();
             $("#dateToCar").datepicker();
+           
+           
+            var flag = true;
+            $("#formTour").submit(function(){
+                 var dateFormTour = $.trim($("#dateFormTour").val());
+                  var dateToTour = $.trim($("#dateToTour").val());
+              if (dateFormTour == "" && dateToTour == "") {
+                alert("Bạn phải nhập một trong hai form Tour");
+                flag = false;
+              }
+              return flag;
+            });
+              $("#formCar").submit(function(){
+                  var dateFormCar = $.trim($("#dateFormCar").val());
+                  var dateToCar = $.trim($("#dateToCar").val());
+              if (dateFormCar == "" && dateToCar == "") {
+                alert("Bạn phải nhập một trong hai form Car");
+                flag = false;
+              }
+              return flag;
+            });
 
         });
         function checkdate(){
